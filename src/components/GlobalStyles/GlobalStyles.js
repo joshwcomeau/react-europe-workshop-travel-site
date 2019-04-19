@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle`
   *:after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    line-height: 1.3;
   }
 
   html, body, div,
