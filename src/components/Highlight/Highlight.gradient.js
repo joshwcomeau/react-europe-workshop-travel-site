@@ -7,7 +7,10 @@ const Highlight = ({ children }) => {
   return (
     <Wrapper>
       {children}
-      <HighlightElem />
+      <HighlightWrapper>
+        {children}
+        <HighlightElem />
+      </HighlightWrapper>
     </Wrapper>
   );
 };
@@ -25,16 +28,28 @@ const animation = keyframes`
 const Wrapper = styled.span`
   display: inline-block;
   position: relative;
+  z-index: -1;
 `;
 
 const HighlightElem = styled.div`
   position: absolute;
   z-index: -1;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: ${COLORS.yellow[300]};
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(-90deg, ${COLORS.aqua[500]}, ${COLORS.blue[500]});
+`;
+
+const HighlightWrapper = styled.span`
+  position: absolute;
+  z-index: 2;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  padding: 16px;
+  color: white;
   animation: ${animation} 1000ms 500ms cubic-bezier(0.29, -0.04, 0.28, 1.05)
     both;
 `;
