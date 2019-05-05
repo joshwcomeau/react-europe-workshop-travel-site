@@ -13,7 +13,7 @@ export const COLORS = {
     '700': prepColor({
       hue: 0,
       saturation: 100,
-      brightness: 40,
+      brightness: 65,
     }),
   },
   orange: {
@@ -29,6 +29,11 @@ export const COLORS = {
     }),
   },
   yellow: {
+    '100': prepColor({
+      hue: 58,
+      saturation: 60,
+      brightness: 100,
+    }),
     '300': prepColor({
       hue: 54,
       saturation: 80,

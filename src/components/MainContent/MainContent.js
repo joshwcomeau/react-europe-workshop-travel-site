@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading from '../Heading';
+import Highlight from '../Highlight';
 import FancyButton from '../FancyButton';
 import SpacerGif from '../SpacerGif';
 
@@ -12,7 +13,8 @@ const MainContent = () => {
       <Wrapper>
         <MaxWidthWrapper>
           <Heading style={{ maxWidth: 900 }}>
-            Are you ready to start your adventure? We can help.
+            Are you ready to start your adventure?{' '}
+            <Highlight>We can help.</Highlight>
           </Heading>
 
           <SpacerGif size={64} />

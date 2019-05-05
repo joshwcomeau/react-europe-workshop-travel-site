@@ -6,12 +6,12 @@ import { COLORS } from '../../constants';
 const GlobalStyles = createGlobalStyle`
   ::-moz-selection { /* Code for Firefox */
     color: #000;
-    background: ${COLORS.yellow[300]};
+    background: ${COLORS.yellow[100]};
   }
 
   ::selection {
     color: #000;
-    background: ${COLORS.yellow[300]};
+    background: ${COLORS.yellow[100]};
   }
 
   *,
