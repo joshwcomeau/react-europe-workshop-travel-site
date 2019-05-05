@@ -49,12 +49,16 @@ const Button = styled.button`
 
   &:active {
     transform: translate(0px, 0px);
-    transition: none;
+    transition: transform 100ms;
     background: linear-gradient(
       135deg,
       ${COLORS.orange[500]},
       ${COLORS.red[700]}
     );
+  }
+
+  &:focus:not(.focus-visible) {
+    outline: none;
   }
 `;
 

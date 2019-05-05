@@ -1,4 +1,5 @@
 import React from 'react';
+import 'focus-visible';
 
 import GlobalStyles from '../GlobalStyles';
 import Header from '../Header';

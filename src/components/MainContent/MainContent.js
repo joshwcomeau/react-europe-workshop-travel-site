@@ -6,32 +6,54 @@ import Heading from '../Heading';
 import Highlight from '../Highlight';
 import FancyButton from '../FancyButton';
 import SpacerGif from '../SpacerGif';
+import FadeIn from '../FadeIn';
+import ShiftBy from '../ShiftBy';
 
 const MainContent = () => {
   return (
     <>
       <Wrapper>
         <MaxWidthWrapper>
-          <Heading style={{ maxWidth: 900 }}>
-            Are you ready to start your adventure?{' '}
-            <Highlight>We can help.</Highlight>
-          </Heading>
+          <FadeIn duration={1000} delay={250}>
+            <ShiftBy y={-10}>
+              <Heading style={{ maxWidth: 900 }}>
+                Are you ready to start your adventure?{' '}
+                <Highlight>We can help.</Highlight>
+              </Heading>
+            </ShiftBy>
+          </FadeIn>
 
           <SpacerGif size={64} />
 
-          <Paragraph>
-            When adventure harkens, you don’t want to worry about your camera
-            and luggage. MadeUp Corp is an on-demand gear rental service, so
-            that you never have to worry about forgetting to pack your Leica Q2.
-          </Paragraph>
+          <FadeIn duration={1000} delay={400}>
+            <ShiftBy y={-10}>
+              <Paragraph>
+                When adventure harkens, you don’t want to worry about your
+                camera and luggage. MadeUp Corp is an on-demand gear rental
+                service, so that you never have to worry about forgetting to
+                pack your Leica Q2.
+              </Paragraph>
 
-          <Paragraph>Available in 29 countries around the world.</Paragraph>
+              <Paragraph>Available in 29 countries around the world.</Paragraph>
+            </ShiftBy>
+          </FadeIn>
 
           <SpacerGif size={24} />
 
-          <FancyButton>Sign up</FancyButton>
+          <FadeIn duration={1000} delay={600}>
+            <ShiftBy y={-10}>
+              <FancyButton>Sign up</FancyButton>
+            </ShiftBy>
+          </FadeIn>
         </MaxWidthWrapper>
-        <CameraImg src="https://i.imgur.com/1zdUK6E.jpg" />
+
+        <CameraWrapper>
+          <FadeIn duration={1500} delay={500}>
+            <ShiftBy x={-30}>
+              <CameraImg src="https://i.imgur.com/1zdUK6E.jpg" />
+            </ShiftBy>
+          </FadeIn>
+        </CameraWrapper>
       </Wrapper>
     </>
   );
@@ -57,7 +79,7 @@ const Paragraph = styled.p`
   margin-bottom: 32px;
 `;
 
-const CameraImg = styled.img`
+const CameraWrapper = styled.div`
   display: block;
   position: absolute;
   z-index: -1;
@@ -77,6 +99,10 @@ const CameraImg = styled.img`
   @media (max-width: 850px) {
     display: none;
   }
+`;
+
+const CameraImg = styled.img`
+  width: 100%;
 `;
 
 export default MainContent;
