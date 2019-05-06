@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import luggageCameraSrc from '../../assets/luggage-camera@2x.png';
-
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import Heading from '../Heading';
 import FancyButton from '../FancyButton';
@@ -31,7 +29,7 @@ const MainContent = () => {
 
           <FancyButton>Sign up</FancyButton>
         </MaxWidthWrapper>
-        <CameraImg src={luggageCameraSrc} />
+        <CameraImg src="https://i.imgur.com/1zdUK6E.jpg" />
       </Wrapper>
     </>
   );
