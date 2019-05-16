@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 const SpacerGif = ({ width, height, size }) => {
   // Can supply either width + height, or size. Not both.

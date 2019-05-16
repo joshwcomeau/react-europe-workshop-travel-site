@@ -3,7 +3,6 @@
  *
  * A real version of this component would have support for multiple sizes.
  */
-import React from 'react';
 import styled from 'styled-components';
 
 const Heading = styled.h2`
