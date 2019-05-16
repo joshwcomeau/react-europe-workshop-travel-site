@@ -14,11 +14,13 @@ const MainContent = () => {
     <>
       <Wrapper>
         <MaxWidthWrapper>
-          <FadeIn duration={5} delay={5}>
-            <Heading style={{ maxWidth: 900 }}>
-              Are you ready to start your adventure?{' '}
-              <Highlight>We can help.</Highlight>
-            </Heading>
+          <FadeIn duration={1000} delay={0}>
+            <ShiftBy y={-10}>
+              <Heading style={{ maxWidth: 900 }}>
+                Are you ready to start your adventure?{' '}
+                <Highlight kind="yellow">We can help.</Highlight>
+              </Heading>
+            </ShiftBy>
           </FadeIn>
 
           <SpacerGif size={64} />

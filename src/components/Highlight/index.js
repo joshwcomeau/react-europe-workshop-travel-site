@@ -1,1 +1,1 @@
-export { default } from './Highlight.underline';
+export { default } from './Highlight.js';
