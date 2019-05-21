@@ -11,51 +11,49 @@ import ShiftBy from '../ShiftBy';
 
 const MainContent = () => {
   return (
-    <>
-      <Wrapper>
-        <MaxWidthWrapper>
-          <FadeIn duration={1000} delay={0}>
-            <ShiftBy y={-10}>
-              <Heading style={{ maxWidth: 900 }}>
-                Are you ready to start your adventure?{' '}
-                <Highlight kind="yellow">We can help.</Highlight>
-              </Heading>
-            </ShiftBy>
-          </FadeIn>
+    <Wrapper>
+      <MaxWidthWrapper>
+        <FadeIn duration={1000} delay={0}>
+          <ShiftBy y={-10}>
+            <Heading style={{ maxWidth: 900 }}>
+              Are you ready to start your adventure?{' '}
+              <Highlight kind="yellow">We can help.</Highlight>
+            </Heading>
+          </ShiftBy>
+        </FadeIn>
 
-          <SpacerGif size={64} />
+        <SpacerGif size={64} />
 
-          <FadeIn duration={1000} delay={400}>
-            <ShiftBy y={-10}>
-              <Paragraph>
-                When adventure harkens, you don’t want to worry about your
-                camera and luggage. MadeUp Corp is an on-demand gear rental
-                service, so that you never have to worry about forgetting to
-                pack your Leica Q2.
-              </Paragraph>
+        <FadeIn duration={1000} delay={400}>
+          <ShiftBy y={-10}>
+            <Paragraph>
+              When adventure harkens, you don’t want to worry about your camera
+              and luggage. MadeUp Corp is an on-demand gear rental service, so
+              that you never have to worry about forgetting to pack your Leica
+              Q2.
+            </Paragraph>
 
-              <Paragraph>Available in 29 countries around the world.</Paragraph>
-            </ShiftBy>
-          </FadeIn>
+            <Paragraph>Available in 29 countries around the world.</Paragraph>
+          </ShiftBy>
+        </FadeIn>
 
-          <SpacerGif size={24} />
+        <SpacerGif size={24} />
 
-          <FadeIn duration={1000} delay={600}>
-            <ShiftBy y={-10}>
-              <FancyButton>Sign up</FancyButton>
-            </ShiftBy>
-          </FadeIn>
-        </MaxWidthWrapper>
+        <FadeIn duration={1000} delay={600}>
+          <ShiftBy y={-10}>
+            <FancyButton>Sign up</FancyButton>
+          </ShiftBy>
+        </FadeIn>
+      </MaxWidthWrapper>
 
-        <CameraWrapper>
-          <FadeIn duration={1500} delay={500}>
-            <ShiftBy x={-30}>
-              <CameraImg src="https://i.imgur.com/1zdUK6E.jpg" />
-            </ShiftBy>
-          </FadeIn>
-        </CameraWrapper>
-      </Wrapper>
-    </>
+      <CameraWrapper>
+        <FadeIn duration={1500} delay={500}>
+          <ShiftBy x={-30}>
+            <CameraImg src="https://i.imgur.com/1zdUK6E.jpg" />
+          </ShiftBy>
+        </FadeIn>
+      </CameraWrapper>
+    </Wrapper>
   );
 };
 
@@ -63,7 +61,7 @@ const Wrapper = styled.section`
   position: relative;
   padding-top: 128px;
   padding-bottom: 184px;
-  min-height: calc(100vh - 75px - 96px);
+  min-height: calc(100vh);
   max-width: 100vw;
   /*
     Our LuggageCamera image is meant to be cropped offscreen.
