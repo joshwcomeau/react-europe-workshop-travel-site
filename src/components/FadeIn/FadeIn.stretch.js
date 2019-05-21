@@ -1,27 +1,31 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const FadeIn = ({ duration = 500, delay = 0, children }) => {
-  const [hasMounted, setHasMounted] = React.useState(false);
+class FadeIn extends React.Component {
+  state = {
+    hasMounted: false,
+  };
 
-  React.useEffect(() => {
-    let timeoutId = window.setTimeout(() => {
-      setHasMounted(true);
-    }, delay);
-
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, []);
-
-  console.log(hasMounted);
-
-  if (!hasMounted) {
-    return null;
+  componentDidMount() {
+    this.timeoutId = window.setTimeout(() => {
+      this.setState({ hasMounted: true });
+    }, this.props.delay);
   }
 
-  return <Wrapper duration={duration}>{children}</Wrapper>;
-};
+  componentWillUnmount() {
+    window.clearTimeout(this.timeoutId);
+  }
+
+  render() {
+    const { duration, children } = this.props;
+
+    if (!this.state.hasMounted) {
+      return null;
+    }
+
+    return <Wrapper duration={duration}>{children}</Wrapper>;
+  }
+}
 
 const fadeInAnimation = keyframes`
   from {
