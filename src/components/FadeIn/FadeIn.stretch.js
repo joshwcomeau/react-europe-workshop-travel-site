@@ -3,12 +3,12 @@ import styled, { keyframes } from 'styled-components';
 
 class FadeIn extends React.Component {
   state = {
-    hasMounted: false,
+    hasDelayElapsed: false,
   };
 
   componentDidMount() {
     this.timeoutId = window.setTimeout(() => {
-      this.setState({ hasMounted: true });
+      this.setState({ hasDelayElapsed: true });
     }, this.props.delay);
   }
 
@@ -19,7 +19,7 @@ class FadeIn extends React.Component {
   render() {
     const { duration, children } = this.props;
 
-    if (!this.state.hasMounted) {
+    if (!this.state.hasDelayElapsed) {
       return null;
     }
 
